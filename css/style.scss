@@ -1,0 +1,51 @@
+#menu {
+  background-color: #333;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      position: relative;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      &:hover > ul {
+        display: block;
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        background-color: #444;
+        border-top: 0;
+        min-width: 200px;
+        left: 0;
+
+        li {
+          display: block;
+
+          a {
+            padding: 10px 20px;
+          }
+
+          &:hover {
+            background-color: #555;
+          }
+        }
+
+        ul {
+          left: 100%;
+          top: 0;
+        }
+      }
+    }
+  }
+}
